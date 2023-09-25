@@ -1,0 +1,25 @@
+type Repository {
+    name: String!
+    size: Int
+    owner: String!
+    isPrivate: Boolean!
+    numberOfFiles: Int
+    ymlContent: String
+    webhooks: [Webhook!]
+    ymlFile: String
+    ymlFileContent: String
+}
+
+type Repositories {
+    nodes: [Repository!]
+    totalCount: Int!
+}
+
+type Webhook {
+    url: String!
+}
+
+type Query {
+    repositories(limit: Int = 10, offset: Int = 0): Repositories
+    repository(name: String!): Repository
+}

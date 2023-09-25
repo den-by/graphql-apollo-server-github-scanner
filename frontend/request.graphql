@@ -1,0 +1,34 @@
+query Repositories($limit: Int, $offset: Int) {
+    repositories(limit: $limit, offset: $offset) {
+        nodes {
+            name
+            numberOfFiles
+            owner
+            size
+            ymlContent
+            webhooks {
+                url
+            }
+            ymlFile
+            ymlFileContent
+            isPrivate
+        }
+        totalCount
+    }
+}
+
+query Repository($name: String!) {
+    repository(name: $name) {
+        name
+        numberOfFiles
+        owner
+        size
+        ymlContent
+        webhooks {
+            url
+        }
+        ymlFile
+        ymlFileContent
+        isPrivate
+    }
+}

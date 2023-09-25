@@ -1,0 +1,40 @@
+/* Repository Item Styles */
+.repo {
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Repository Title Styles */
+.repo h2 {
+  font-size: 20px;
+  color: #0366d6;
+  margin: 0;
+}
+
+/* Repository Size and Owner Styles */
+.repo .meta-info {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #586069;
+  margin-top: 6px;
+}
+
+/* Icon Styles */
+.repo .meta-info svg {
+  fill: #586069;
+  margin-right: 4px;
+}
+
+/* Hover Effect on Repository Item */
+.repo:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

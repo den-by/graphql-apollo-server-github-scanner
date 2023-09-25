@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": [ "es2015" ],
+    "moduleResolution": "Node",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "#*": [
+        "*/src"
+      ]
+    }
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "require": [
+      "tsconfig-paths/register"
+    ],
+    "include": [
+      "packages/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "packages/**/node_modules",
+      "packages/**/dist",
+      "docs",
+      "packages/**/docs"
+    ]
+  }
+}
